@@ -1,5 +1,5 @@
 pipeline {
-            agent { label 'Jenkins-nodes' }
+            agent { label 'Jenkins nodes' }
             tools {
                       maven 'mvn3.9'
             }
