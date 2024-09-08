@@ -1,7 +1,7 @@
 pipeline {
             agent { label 'Jenkins-demo' }
             tools {
-                      maven:'mvn3.9'
+                      maven 'mvn3.9'
             }
         stages {
               stage('source') { 
