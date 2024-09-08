@@ -1,5 +1,5 @@
 pipeline {
-            agent { label 'Jenkins-demo' }
+            agent { label 'Jenkins-nodes' }
             tools {
                       maven 'mvn3.9'
             }
@@ -10,12 +10,12 @@ pipeline {
                         branch 'master'
                   }
               }
-        stages ('package'){
+        stage ('package'){
                steps{
                         sh 'mvn package' 
             }
         }
-        stages ('archiveArtifact'){
+        stage ('archiveArtifact'){
                steps{
                         archiveArtifacts artifacts: "target/my-app-1.0-SNAPSHOT.jar"
             }
