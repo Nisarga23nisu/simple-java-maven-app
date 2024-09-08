@@ -7,7 +7,7 @@ pipeline {
               stage('source') { 
                   steps { 
                       git url:"https://github.com/Nisarga23nisu/simple-java-maven-app.git"
-                        branch: 'master'
+                        branch 'master'
         stages ('package'){
                steps{
                         sh 'mvn package' 
